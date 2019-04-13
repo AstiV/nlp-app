@@ -14,6 +14,10 @@ bootstrap = Bootstrap(app)
 def index():
     return render_template('index.html')
 
+@app.route('/analyze')
+def analyze():
+    return render_template('index.html')
+
 #TODO change this for production! (debug=True only for dev mode)
 if __name__ == '__main__':
     app.run(debug=True)
