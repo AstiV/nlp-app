@@ -7,6 +7,7 @@ import random
 
 # Configure application
 app = Flask(__name__)
+bootstrap = Bootstrap(app) 
 
 # Routing
 @app.route('/')
