@@ -20,6 +20,11 @@
         <div class="card">
             <p>{{ received_text }}</p>
             <hr/>
+            <div class="card-body">
+                {% for i in summary %}
+                <li>{{ i }}</li>
+                {% endfor %}
+            </div>
             <table class="table table-striped table-dark">
                 <thead>
                     <tr>
