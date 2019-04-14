@@ -21,8 +21,11 @@ def analyze():
         # NLP
         blob = TextBlob(rawtext)
         received_text = blob
-        print(received_text)
-    return render_template('index.html', received_text = received_text)
+        sentiment = blob.sentiment.polarity
+        subjectivity = blob.sentiment.subjectivity
+        number_of_tokens = len(list(blob.words))
+
+    return render_template('index.html', received_text = received_text, sentiment = sentiment, subjectivity = subjectivity, number_of_tokens = number_of_tokens)
 
 #TODO change this for production! (debug=True only for dev mode)
 if __name__ == '__main__':
