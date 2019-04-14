@@ -20,11 +20,23 @@
         <div class="card">
             <p>{{ received_text }}</p>
             <hr/>
-            <p>Score</p>
+            <table class="table table-striped table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Sentiment</th>
+                        <th scope="col">Polarity</th>
+                        <th scope="col">Subjectivity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Score</th>
+                        <td>{{sentiment}}</td>
+                        <td>{{subjectivity}}</td>
+                    </tr>
+                </tbody>
+            </table>
             {{number_of_tokens}}<br/>
-            {{sentiment}}<br/>
-            {{subjectivity}}<br/>
-
         </div>
     </div>
 {% endblock %}
