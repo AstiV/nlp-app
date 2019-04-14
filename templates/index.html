@@ -11,9 +11,14 @@
         <form action="{{url_for('analyze')}}" method="POST">
             <textarea name="rawtext" id="" cols="3" rows="3" class="form-control"></textarea>    
             <input type="submit" name="" value="Submit" class="btn btn-primary">
-            <input type="reset" name="" value="Clear" class="btn btn-outline-primary">
+            <input type="reset" name="" value="Clear" class="btn btn-info">
             <a href="{{url_for('index')}}" type="button" class="btn btn-danger">Reset</a>
         </form>
     </div>
     
+    <div class="container">
+        <div class="card">
+            <p>{{ received_text }}</p>
+        </div>
+    </div>
 {% endblock %}
